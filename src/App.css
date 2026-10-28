@@ -186,6 +186,16 @@ nav a[aria-current='page'] { color: var(--green); text-decoration: underline; te
 .empty-symbol { display: block; font-size: 68px; color: var(--pink); line-height: 1; margin-bottom: 20px; }
 .empty-portfolio h2 { font-size: clamp(24px, 3vw, 32px); }
 .empty-portfolio p { color: var(--muted); line-height: 1.8; margin: 16px 0 28px; word-break: keep-all; }
+.personal-guide { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 26px 0 0; }
+.personal-guide > div { padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: #fff0f7; }
+.personal-guide > div:nth-child(even) { background: var(--mint); }
+.personal-guide dt { font-size: 11px; font-weight: 700; color: #70616e; margin-bottom: 10px; }
+.personal-guide dd { margin: 0; font-size: 15px; font-weight: 650; line-height: 1.7; word-break: keep-all; overflow-wrap: anywhere; }
+.personal-guide-section { margin-bottom: 28px; }
+.personal-guide-section h3 > span { color: var(--pink); }
+@media (max-width: 400px) {
+  .personal-guide { grid-template-columns: 1fr; }
+}
 @media (min-width: 1450px) { .hero { padding-block: 105px 95px; } }
 @media (max-width: 1000px) {
   .page-width, .header-inner { width: calc(100% - 56px); }

@@ -12,6 +12,17 @@ function getCurrentLocation() {
 
 const projects = []
 
+function PersonalGuide() {
+  return (
+    <dl className="personal-guide">
+      <div><dt>기분 좋아지는 순간</dt><dd>맛있는 거 먹을 때.<br />최애는 마라탕!</dd></div>
+      <div><dt>사용 시 주의사항</dt><dd>금자 사용 시 주의:<br />볼륨 조절 불가.</dd></div>
+      <div><dt>금자 충전 방법</dt><dd>옆에서 웃겨주기.</dd></div>
+      <div><dt>좋아하는 그룹</dt><dd>제로베이스원!</dd></div>
+    </dl>
+  )
+}
+
 function ProjectArtwork({ project, className = '' }) {
   return (
     <div className={`project-art ${project.style} ${className}`} aria-hidden="true">
@@ -93,7 +104,8 @@ function App() {
             <span className="example-label">금자는 이런 사람</span>
             <h3>함께 어울리고,<br />친구의 이야기를 들어요.</h3>
             <p>친구들과 어울리거나 이야기를 들어주는 편이에요. 게임 실력과 전략도 더 배우고 싶어요.</p>
-            <div className="interest-tags"><span># 게임</span><span># 잠자기</span><span># 친구 이야기</span></div>
+            <div className="interest-tags"><span># 마라탕</span><span># 제로베이스원</span><span># 친구 이야기</span></div>
+            <PersonalGuide />
             <a className="text-link about-more" href="#/about">자기소개 보기 <span aria-hidden="true">→</span></a>
           </div>
         </section>
@@ -123,6 +135,10 @@ function App() {
                 <div><dt>배우고 싶은 것</dt><dd>게임 실력과 전략을 더 배우고 싶어요.</dd></div>
                 <div><dt>앞으로의 목표</dt><dd>야무지게 자고 야무지게 놀기!</dd></div>
               </dl>
+              <section className="personal-guide-section" aria-labelledby="personal-guide-title">
+                <h3 id="personal-guide-title">금자 사용 설명서<span>.</span></h3>
+                <PersonalGuide />
+              </section>
               <a className="button button-primary" href="#/portfolio">포트폴리오 보기 <span aria-hidden="true">↗</span></a>
             </div>
           </div>
