@@ -1,0 +1,48 @@
+.mala-page { padding-block: 42px 72px; }
+.mala-heading { max-width: 820px; }
+.mala-heading h1 { font-size: clamp(30px, 4vw, 48px); word-break: keep-all; overflow-wrap: anywhere; }
+.mala-heading h1 span { color: var(--pink); }
+.mala-heading > p, .mala-picker > p { color: var(--muted); line-height: 1.8; }
+.mala-steps { display: flex; flex-wrap: wrap; gap: 12px; list-style: none; padding: 0; margin: 30px 0; }
+.mala-steps li { padding: 10px 18px; border-radius: 30px; background: #f0e8ed; font-size: 13px; }
+.mala-steps [aria-current] { background: var(--mint); font-weight: 750; }
+.mala-kitchen { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); align-items: start; gap: 32px; }
+.mala-kitchen[hidden] { display: none; }
+.mala-picker h2, .mala-bowl h2, .mala-result h2 { font-size: 28px; }
+.mala-group { min-width: 0; padding: 20px; margin: 24px 0; border: 1px solid var(--line); border-radius: 16px; }
+.mala-group legend { padding-inline: 8px; font-size: 16px; font-weight: 750; }
+.mala-options { display: flex; gap: 10px; flex-wrap: wrap; }
+.mala-options button { min-height: 44px; border: 1px solid #d6bdcd; border-radius: 10px; padding: 10px 14px; background: white; color: #302530; cursor: pointer; }
+.mala-options button:hover { border-color: var(--pink); }
+.mala-options button[aria-pressed='true'] { background: var(--pink); border-color: var(--pink); color: white; }
+.mala-bowl { position: sticky; top: 110px; background: #edfbf5; border: 2px solid #8bcbb5; border-radius: 24px; padding: 28px; text-align: center; }
+.mala-bowl-icon { display: block; font-size: 66px; margin-bottom: 12px; }
+.mala-count { color: var(--pink); font-weight: 750; }
+.mala-tags { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 20px 0; }
+.mala-tags li { font-size: 13px; background: white; border: 1px solid var(--line); border-radius: 20px; padding: 6px 12px; overflow-wrap: anywhere; }
+.mala-bowl .button { width: 100%; justify-content: center; margin-top: 16px; }
+.mala-page button { cursor: pointer; }
+.mala-page button:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+.mala-page .button { border: 0; }
+.mala-reset { background: transparent; border: 0; color: var(--pink); text-decoration: underline; text-underline-offset: 4px; padding: 14px 8px; min-height: 44px; }
+.mala-hint { color: var(--muted); font-size: 12px; line-height: 1.8; }
+.mala-result { background: #fff0f7; border: 1px solid #e8aacb; border-radius: 24px; padding: clamp(20px, 4vw, 42px); text-align: center; }
+.mala-result .eyebrow { justify-content: center; }
+.mala-score { font-size: 92px; color: var(--pink); font-weight: 850; line-height: 1.1; margin: 24px 0; letter-spacing: -5px; }
+.mala-score > span { font-size: 36px; letter-spacing: -1px; }
+.mala-comparison { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-block: 28px; text-align: left; }
+.mala-comparison article { min-width: 0; padding: 20px; border-radius: 16px; background: #fffafc; }
+.mala-comparison article:first-child { background: var(--mint); }
+.mala-comparison h3 { font-size: 16px; line-height: 1.7; margin: 0; }
+.mala-comparison p { font-size: 14px; line-height: 1.8; }
+.mala-geumja { text-align: left; border-top: 1px solid var(--line); padding-block: 20px; }
+.mala-geumja summary { cursor: pointer; line-height: 1.8; }
+.mala-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+.mala-invitation { background: #fff0f7; }
+@media (max-width: 700px) {
+  .mala-page { padding-block: 28px 48px; }
+  .mala-kitchen, .mala-comparison { grid-template-columns: 1fr; }
+  .mala-bowl { position: static; padding: 22px; }
+  .mala-group { padding: 16px; }
+  .mala-options { gap: 8px; }
+}
